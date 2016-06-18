@@ -34,6 +34,18 @@ class Object {
     }
 }
 
+// 個別のアプリの情報を格納するクラス
+class Item {
+    let title: String
+    let imgUrl: NSURL
+    
+    init(json: Object) {
+        title = json["title"]["label"].stringValue
+        let urlStr = json["im:image"][0]["label"].stringValue
+        imgUrl = NSURL(string: urlStr)!
+    }
+}
+
 class Feed {
     // URLからランキング情報のJSONを取得
     static func getJSON() -> Object {
@@ -49,15 +61,19 @@ class Feed {
     
     // ランキングの情報を取得するためのメソッド
     // 一旦、アプリ名だけを返す
-    static func getRanking() -> [String] {
+    static func getRanking() -> [Item] {
         // URLからデータの取得
         let json = getJSON()
         
         let appList = json["feed"]["entry"].arrayValue
         
+        let titleList = appList.map { Item(json: $0) }
+        /* 上の書き方は下と同義
         let titleList = appList.map { app in
-            app["title"]["label"].stringValue
+            Item(json: app)
         }
+        */
+ 
         
         return titleList
     }

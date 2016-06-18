@@ -21,12 +21,16 @@ extension RankingListViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
+        let item = list[indexPath.row]
+        
         // 表示順 = 順位のはず
         let rank = indexPath.row + 1
+        let imgData = NSData(contentsOfURL: item.imgUrl)!
         
         let cell = UITableViewCell()
         // 文字列中で \(変数名) とすると、変数展開ができる
-        cell.textLabel?.text = "\(rank)位 \(list[indexPath.row])"
+        cell.textLabel?.text = "\(rank)位 \(item.title)"
+        cell.imageView?.image = UIImage(data: imgData)
         
         return cell
     }
