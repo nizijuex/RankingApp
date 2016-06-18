@@ -12,6 +12,8 @@
 		AEF23AE91D14C8E400FF6DFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEF23AE71D14C8E400FF6DFB /* Main.storyboard */; };
 		AEF23AEB1D14C8E400FF6DFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEF23AEA1D14C8E400FF6DFB /* Assets.xcassets */; };
 		AEF23AEE1D14C8E400FF6DFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEF23AEC1D14C8E400FF6DFB /* LaunchScreen.storyboard */; };
+		AEF23AF61D14D02D00FF6DFB /* RankingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF23AF51D14D02D00FF6DFB /* RankingListViewController.swift */; };
+		AEF23AF81D14D5D700FF6DFB /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF23AF71D14D5D700FF6DFB /* Feed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		AEF23AEA1D14C8E400FF6DFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEF23AED1D14C8E400FF6DFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEF23AEF1D14C8E400FF6DFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEF23AF51D14D02D00FF6DFB /* RankingListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingListViewController.swift; sourceTree = "<group>"; };
+		AEF23AF71D14D5D700FF6DFB /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +60,12 @@
 			children = (
 				AEF23AE31D14C8E400FF6DFB /* AppDelegate.swift */,
 				AEF23AE51D14C8E400FF6DFB /* ViewController.swift */,
+				AEF23AF51D14D02D00FF6DFB /* RankingListViewController.swift */,
 				AEF23AE71D14C8E400FF6DFB /* Main.storyboard */,
 				AEF23AEA1D14C8E400FF6DFB /* Assets.xcassets */,
 				AEF23AEC1D14C8E400FF6DFB /* LaunchScreen.storyboard */,
 				AEF23AEF1D14C8E400FF6DFB /* Info.plist */,
+				AEF23AF71D14D5D700FF6DFB /* Feed.swift */,
 			);
 			path = RankingApp;
 			sourceTree = "<group>";
@@ -136,7 +142,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEF23AE61D14C8E400FF6DFB /* ViewController.swift in Sources */,
+				AEF23AF81D14D5D700FF6DFB /* Feed.swift in Sources */,
 				AEF23AE41D14C8E400FF6DFB /* AppDelegate.swift in Sources */,
+				AEF23AF61D14D02D00FF6DFB /* RankingListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
