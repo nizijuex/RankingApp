@@ -37,7 +37,7 @@ class Object {
 class Feed {
     // URLからランキング情報のJSONを取得
     static func getJSON() -> Object {
-        let urlStr = "https://itunes.apple.com/jp/rss/newfreeapplications/limit=10/json"
+        let urlStr = "https://itunes.apple.com/jp/rss/topfreeapplications/limit=10/json"
         // Forced unwrapはあまり推奨されないが、NSURLが空の場合はどうしもないのでここではForced unwrapしてしまう
         let url = NSURL(string: urlStr)!
         let data = NSData(contentsOfURL: url)!
