@@ -36,13 +36,41 @@ class Object {
 
 /// 個別のアプリの情報を格納するクラス
 class Item {
+    /// アプリ名
     let title: String
+    /// アプリアイコンURL
     let imgUrl: NSURL
+    /// 説明文
+    let description: String
+    /// ストアへのリンク
+    let linkUrl: NSURL
+    /// 作成者
+    let author: String
+    /// カテゴリ
+    let category: String
+    /// リリース日
+    let releaseDate: String
     
     init(json: Object) {
+        // アプリ名
         title = json["title"]["label"].stringValue
-        let urlStr = json["im:image"][0]["label"].stringValue
+        
+        // アプリアイコンURL
+        var urlStr = json["im:image"][0]["label"].stringValue
         imgUrl = NSURL(string: urlStr)!
+        
+        // 説明文
+        description = json["summary"]["label"].stringValue
+        
+        // ストアへのリンク
+        urlStr = json["link"]["attributes"]["href"].stringValue
+        linkUrl = NSURL(string: urlStr)!
+        
+        // 作成者
+        
+        // カテゴリ
+        
+        // リリース日
     }
 }
 
