@@ -26,7 +26,12 @@ class RankingDetailViewController: UIViewController {
         super.viewDidLoad()
         
         titleLabel.text = item.title
+        authorLabel.text = item.author
+        categoryLabel.text = item.category
+        releaseDateLabel.text = item.releaseDate
+        descriptionTextView.text = item.description
         
-        // 残りのプロパティの値を設定
+        let imgData = NSData(contentsOfURL: item.imgUrl)!
+        img.image = UIImage(data: imgData)
     }
 }
