@@ -67,10 +67,13 @@ class Item {
         linkUrl = NSURL(string: urlStr)!
         
         // 作成者
+        author = json["im:artist"]["label"].stringValue
         
         // カテゴリ
+        category = json["category"]["attributes"]["label"].stringValue
         
         // リリース日
+        releaseDate = json["im:releaseDate"]["attributes"]["label"].stringValue
     }
 }
 

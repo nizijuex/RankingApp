@@ -45,7 +45,8 @@ extension RankingListViewController {
         // `NSBundle.mainBundle()`は現時点では決まり文句として覚えておけばOK
         let storyBoard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         // Storyboard上から、IDをキーにしてViewControllerを生成
-        let viewController = storyBoard.instantiateViewControllerWithIdentifier("RankingDetailViewController")
+        let viewController = storyBoard.instantiateViewControllerWithIdentifier("RankingDetailViewController") as! RankingDetailViewController
+        viewController.item = list[indexPath.row]
         
         // 独立した画面としてModal表示
         // self.presentViewController(viewController, animated: true, completion: nil)
