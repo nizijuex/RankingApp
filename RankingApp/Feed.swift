@@ -8,7 +8,7 @@
 
 import Foundation
 
-// JSONデータの参照を簡略化させるための汎用クラス
+/// JSONデータの参照を簡略化させるための汎用クラス
 class Object {
     let data: AnyObject
     
@@ -34,7 +34,7 @@ class Object {
     }
 }
 
-// 個別のアプリの情報を格納するクラス
+/// 個別のアプリの情報を格納するクラス
 class Item {
     let title: String
     let imgUrl: NSURL
@@ -47,7 +47,7 @@ class Item {
 }
 
 class Feed {
-    // URLからランキング情報のJSONを取得
+    /// URLからランキング情報のJSONを取得
     static func getJSON() -> Object {
         let urlStr = "https://itunes.apple.com/jp/rss/topfreeapplications/limit=10/json"
         // Forced unwrapはあまり推奨されないが、NSURLが空の場合はどうしもないのでここではForced unwrapしてしまう
@@ -59,8 +59,11 @@ class Feed {
         return Object(json)
     }
     
-    // ランキングの情報を取得するためのメソッド
-    // 一旦、アプリ名だけを返す
+
+    /**
+     ランキングの情報を取得するためのメソッド
+     一旦、アプリ名だけを返す
+    */
     static func getRanking() -> [Item] {
         // URLからデータの取得
         let json = getJSON()

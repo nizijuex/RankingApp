@@ -9,16 +9,18 @@
 import UIKit
 
 class RankingListViewController: UITableViewController {
-    // ランキングのリスト情報
+    /// ランキングのリスト情報
     let list = Feed.getRanking()
 }
 
 extension RankingListViewController {
+    /// 各セクション毎のセル数を返すDataSourceメソッド
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return list.count
     }
     
+    /// 各セルのインスタンスを返すDataSourceメソッド
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let item = list[indexPath.row]
@@ -33,5 +35,22 @@ extension RankingListViewController {
         cell.imageView?.image = UIImage(data: imgData)
         
         return cell
+    }
+    
+    /// セルをタップした時のDelegateメソッド
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        // ランキング詳細画面に遷移
+        
+        // 'Main.storyboard'を参照するインスタンスの生成
+        // `NSBundle.mainBundle()`は現時点では決まり文句として覚えておけばOK
+        let storyBoard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        // Storyboard上から、IDをキーにしてViewControllerを生成
+        let viewController = storyBoard.instantiateViewControllerWithIdentifier("RankingDetailViewController")
+        
+        // 独立した画面としてModal表示
+        // self.presentViewController(viewController, animated: true, completion: nil)
+        
+        // NavigationController配下の画面として遷移
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
