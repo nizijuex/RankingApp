@@ -30,6 +30,13 @@
                                     <segue destination="3x1-rw-lAS" kind="show" id="9NG-cX-a73"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWB-FP-efg">
+                                <rect key="frame" x="138" y="276" width="45" height="30"/>
+                                <state key="normal" title="使い方"/>
+                                <connections>
+                                    <segue destination="QdO-Nz-kqr" kind="show" id="Mwq-K3-wcp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -38,6 +45,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="408" y="308"/>
+        </scene>
+        <!--使い方画面-->
+        <scene sceneID="BMp-nF-84A">
+            <objects>
+                <viewController title="使い方画面" id="QdO-Nz-kqr" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sDf-oe-hJz"/>
+                        <viewControllerLayoutGuide type="bottom" id="SAB-3w-WUb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aBZ-d2-1C2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="AppStoreのランキングを表示するアプリです" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5UC-SA-iI7">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="0.1830686239" blue="0.16508363719999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="480"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XzO-us-5vl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="408" y="902"/>
         </scene>
         <!--ランキング一覧画面-->
         <scene sceneID="aEC-ro-S9P">
@@ -67,6 +103,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mqG-k3-ctu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="799" y="308"/>
+        </scene>
+        <!--ランキング詳細画面-->
+        <scene sceneID="nrA-U7-HoQ">
+            <objects>
+                <viewController title="ランキング詳細画面" id="4Wy-qF-MyX" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uth-SS-sR3"/>
+                        <viewControllerLayoutGuide type="bottom" id="qYV-LE-kz7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gYX-OM-xg7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="480"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gx6-LT-BhT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1188" y="308"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sKN-Y2-tIj">
