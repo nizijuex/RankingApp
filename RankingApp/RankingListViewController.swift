@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class RankingListViewController: UITableViewController {
     /// ランキングのリスト情報
@@ -38,11 +39,13 @@ extension RankingListViewController {
         // 表示順 = 順位のはず
         let rank = indexPath.row + 1
         let imgData = NSData(contentsOfURL: item.imgUrl)!
+        let img = UIImage(data: imgData)
+        img?.af_inflate()
         
         let cell = UITableViewCell()
         // 文字列中で \(変数名) とすると、変数展開ができる
         cell.textLabel?.text = "\(rank)位 \(item.title)"
-        cell.imageView?.image = UIImage(data: imgData)
+        cell.imageView?.image = img
         
         return cell
     }

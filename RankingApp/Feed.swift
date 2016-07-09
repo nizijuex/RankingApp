@@ -57,7 +57,7 @@ class Item {
 class Feed {
     /// URLからランキング情報のJSONを取得
     static func getJSON(completion: JSON -> Void) {
-        let urlStr = "https://itunes.apple.com/jp/rss/topfreeapplications/limit=10/json"
+        let urlStr = "https://itunes.apple.com/jp/rss/topfreeapplications/limit=100/json"
         
         Alamofire.request(.GET, urlStr).responseSwiftyJSON { res in
             // レスポンスを受け取った時の処理
