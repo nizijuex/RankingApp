@@ -33,5 +33,17 @@ class RankingDetailViewController: UIViewController {
         
         let imgData = NSData(contentsOfURL: item.imgUrl)!
         img.image = UIImage(data: imgData)
+        
+        // ストアへのリンクボタン追加
+        let button = UIBarButtonItem(title: "ストアへ", style: UIBarButtonItemStyle.Plain, target: self, action: "didTapStoreButton:")
+        
+        navigationItem.rightBarButtonItems = [button]
+    }
+    
+    /// ストアへのリンクボタンがタップされた時に呼ばれるメソッド
+    func didTapStoreButton(_: UIBarButtonItem) {
+        UIApplication.sharedApplication().openURL(item.linkUrl)
     }
 }
+
+
