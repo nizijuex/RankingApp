@@ -149,10 +149,10 @@ public class AutoPurgingImageCache: ImageRequestCache {
             return dispatch_queue_create(name, DISPATCH_QUEUE_CONCURRENT)
         }()
 
-        #if os(iOS) || os(tvOS)
+        #if os(iOS)
             NSNotificationCenter.defaultCenter().addObserver(
                 self,
-                selector: #selector(AutoPurgingImageCache.removeAllImages),
+                selector: "removeAllImages",
                 name: UIApplicationDidReceiveMemoryWarningNotification,
                 object: nil
             )
