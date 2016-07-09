@@ -10,7 +10,17 @@ import UIKit
 
 class RankingListViewController: UITableViewController {
     /// ランキングのリスト情報
-    let list = Feed.getRanking()
+    var list = [Item]()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        Feed.getRanking { items in
+            self.list = items
+            // リスト差し替わるので、テーブルの表示を更新
+            self.tableView.reloadData()
+        }
+    }
 }
 
 extension RankingListViewController {
