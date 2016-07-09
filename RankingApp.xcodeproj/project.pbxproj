@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		823FFC5F0394C6D7EFF4A11F /* Pods_RankingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50AB45FD96864AE0D403C493 /* Pods_RankingApp.framework */; };
 		AEF23AE41D14C8E400FF6DFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF23AE31D14C8E400FF6DFB /* AppDelegate.swift */; };
 		AEF23AE61D14C8E400FF6DFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF23AE51D14C8E400FF6DFB /* ViewController.swift */; };
 		AEF23AE91D14C8E400FF6DFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEF23AE71D14C8E400FF6DFB /* Main.storyboard */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1CD6E00C061C494589E2A98F /* Pods-RankingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RankingApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RankingApp/Pods-RankingApp.debug.xcconfig"; sourceTree = "<group>"; };
+		50AB45FD96864AE0D403C493 /* Pods_RankingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RankingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF23AE01D14C8E400FF6DFB /* RankingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RankingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF23AE31D14C8E400FF6DFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEF23AE51D14C8E400FF6DFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +31,7 @@
 		AEF23AF51D14D02D00FF6DFB /* RankingListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingListViewController.swift; sourceTree = "<group>"; };
 		AEF23AF71D14D5D700FF6DFB /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		AEFACA3C1D1E0BE30085257C /* RankingDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingDetailViewController.swift; sourceTree = "<group>"; };
+		FAF0C909DDF45152B271E138 /* Pods-RankingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RankingApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-RankingApp/Pods-RankingApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				823FFC5F0394C6D7EFF4A11F /* Pods_RankingApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +51,8 @@
 			children = (
 				AEF23AE21D14C8E400FF6DFB /* RankingApp */,
 				AEF23AE11D14C8E400FF6DFB /* Products */,
+				FF446D505D2BBA3211464012 /* Pods */,
+				C8867C572B4B438FE8003E96 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +80,23 @@
 			path = RankingApp;
 			sourceTree = "<group>";
 		};
+		C8867C572B4B438FE8003E96 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50AB45FD96864AE0D403C493 /* Pods_RankingApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF446D505D2BBA3211464012 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1CD6E00C061C494589E2A98F /* Pods-RankingApp.debug.xcconfig */,
+				FAF0C909DDF45152B271E138 /* Pods-RankingApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AEF23AF21D14C8E400FF6DFB /* Build configuration list for PBXNativeTarget "RankingApp" */;
 			buildPhases = (
+				2C76C6B5EEC6381437A210AB /* 📦 Check Pods Manifest.lock */,
 				AEF23ADC1D14C8E400FF6DFB /* Sources */,
 				AEF23ADD1D14C8E400FF6DFB /* Frameworks */,
 				AEF23ADE1D14C8E400FF6DFB /* Resources */,
+				032698569A06AF7C9A3F4BD5 /* 📦 Embed Pods Frameworks */,
+				26473A2D240B1E8B23FC014B /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -138,6 +165,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		032698569A06AF7C9A3F4BD5 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RankingApp/Pods-RankingApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		26473A2D240B1E8B23FC014B /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RankingApp/Pods-RankingApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2C76C6B5EEC6381437A210AB /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AEF23ADC1D14C8E400FF6DFB /* Sources */ = {
@@ -257,6 +332,7 @@
 		};
 		AEF23AF31D14C8E400FF6DFB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CD6E00C061C494589E2A98F /* Pods-RankingApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RankingApp/Info.plist;
@@ -268,6 +344,7 @@
 		};
 		AEF23AF41D14C8E400FF6DFB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAF0C909DDF45152B271E138 /* Pods-RankingApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RankingApp/Info.plist;
