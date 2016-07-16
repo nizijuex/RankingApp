@@ -18,6 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="zTz-nJ-5WM">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bn5-WN-lcE">
                                 <rect key="frame" x="145" y="225" width="30" height="30"/>
                                 <state key="normal" title="表示"/>
@@ -35,21 +38,25 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アプリランキング" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DID-A4-SK5">
                                 <rect key="frame" x="92" y="100" width="136" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fWB-FP-efg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Fc-bI-fGn"/>
+                            <constraint firstItem="zTz-nJ-5WM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="5m6-x0-2RV"/>
                             <constraint firstItem="bn5-WN-lcE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="97z-D3-nfr"/>
+                            <constraint firstAttribute="trailing" secondItem="zTz-nJ-5WM" secondAttribute="trailing" id="F5e-Vo-zHi"/>
                             <constraint firstItem="DID-A4-SK5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HJL-4B-cxn"/>
                             <constraint firstItem="bn5-WN-lcE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IqR-GA-zu7"/>
                             <constraint firstItem="DID-A4-SK5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="36" id="UQC-L2-dpE"/>
                             <constraint firstItem="DID-A4-SK5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="36" id="jFq-gx-Df7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zTz-nJ-5WM" secondAttribute="bottom" id="jQX-YS-gXc"/>
                             <constraint firstItem="fWB-FP-efg" firstAttribute="top" secondItem="bn5-WN-lcE" secondAttribute="bottom" constant="30" id="lwy-dZ-ySL"/>
                             <constraint firstItem="DID-A4-SK5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nyn-pk-isp"/>
                             <constraint firstItem="DID-A4-SK5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rrd-ho-4VR"/>
+                            <constraint firstItem="zTz-nJ-5WM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ulW-8y-r06"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -76,7 +83,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="AppStoreのランキングを表示するアプリです" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5UC-SA-iI7">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="AppStoreのランキングを表示するアプリです" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5UC-SA-iI7">
                                 <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="1" green="0.1830686239" blue="0.16508363719999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -108,12 +115,52 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="D22-dy-fWB">
-                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="RankingItemTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="RankingItemTableViewCell" rowHeight="64" id="D22-dy-fWB" customClass="RankingItemTableViewCell" customModule="RankingApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="320" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="D22-dy-fWB" id="RLY-4i-3HQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="63"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jrX-Rt-OmX">
+                                            <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="64" id="aZ3-yw-gdM"/>
+                                                <constraint firstAttribute="width" constant="64" id="tdO-cD-p3V"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1位" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAi-Db-AaE">
+                                            <rect key="frame" x="72" y="21" width="40" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="7kX-Ef-w8R"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アプリ名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qr6-Ji-Nh6">
+                                            <rect key="frame" x="120" y="21" width="68" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="jrX-Rt-OmX" firstAttribute="top" secondItem="RLY-4i-3HQ" secondAttribute="top" id="12r-2S-CMF"/>
+                                        <constraint firstItem="jrX-Rt-OmX" firstAttribute="leading" secondItem="RLY-4i-3HQ" secondAttribute="leading" id="3pn-vy-5NN"/>
+                                        <constraint firstItem="jrX-Rt-OmX" firstAttribute="leading" secondItem="RLY-4i-3HQ" secondAttribute="leadingMargin" id="Q3R-Wd-gYo"/>
+                                        <constraint firstItem="jrX-Rt-OmX" firstAttribute="top" secondItem="RLY-4i-3HQ" secondAttribute="topMargin" id="WDU-yf-40i"/>
+                                        <constraint firstItem="GAi-Db-AaE" firstAttribute="leading" secondItem="jrX-Rt-OmX" secondAttribute="trailing" constant="8" id="ah5-01-DI3"/>
+                                        <constraint firstItem="GAi-Db-AaE" firstAttribute="centerY" secondItem="RLY-4i-3HQ" secondAttribute="centerY" id="dFR-pv-J66"/>
+                                        <constraint firstItem="qr6-Ji-Nh6" firstAttribute="leading" secondItem="GAi-Db-AaE" secondAttribute="trailing" constant="8" id="id5-5v-x7D"/>
+                                        <constraint firstItem="qr6-Ji-Nh6" firstAttribute="centerY" secondItem="RLY-4i-3HQ" secondAttribute="centerY" id="zJT-GK-M4W"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="Q3R-Wd-gYo"/>
+                                            <exclude reference="WDU-yf-40i"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -161,7 +208,7 @@
                                     <constraint firstAttribute="height" constant="21" id="G7F-hW-B60"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カテゴリ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQU-0c-MTc">
@@ -170,7 +217,7 @@
                                     <constraint firstAttribute="height" constant="21" id="LK9-pl-1gE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アプリ名" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpa-0w-Y2D">
@@ -180,7 +227,7 @@
                                     <constraint firstAttribute="width" constant="237" id="tkd-OX-cdj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -194,7 +241,7 @@
                                     <constraint firstAttribute="height" constant="21" id="dVD-Eb-qLM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jZI-PX-Dta">
@@ -270,4 +317,7 @@
             <point key="canvasLocation" x="25" y="308"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="1024" height="724"/>
+    </resources>
 </document>

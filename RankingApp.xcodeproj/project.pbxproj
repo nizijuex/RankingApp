@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		823FFC5F0394C6D7EFF4A11F /* Pods_RankingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50AB45FD96864AE0D403C493 /* Pods_RankingApp.framework */; };
+		AE5995121D39D6AC003B036A /* RankingItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5995111D39D6AC003B036A /* RankingItemTableViewCell.swift */; };
 		AEF23AE41D14C8E400FF6DFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF23AE31D14C8E400FF6DFB /* AppDelegate.swift */; };
 		AEF23AE61D14C8E400FF6DFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF23AE51D14C8E400FF6DFB /* ViewController.swift */; };
 		AEF23AE91D14C8E400FF6DFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEF23AE71D14C8E400FF6DFB /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		1CD6E00C061C494589E2A98F /* Pods-RankingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RankingApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RankingApp/Pods-RankingApp.debug.xcconfig"; sourceTree = "<group>"; };
 		50AB45FD96864AE0D403C493 /* Pods_RankingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RankingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE5995111D39D6AC003B036A /* RankingItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingItemTableViewCell.swift; sourceTree = "<group>"; };
 		AEF23AE01D14C8E400FF6DFB /* RankingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RankingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF23AE31D14C8E400FF6DFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEF23AE51D14C8E400FF6DFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				AEF23AEC1D14C8E400FF6DFB /* LaunchScreen.storyboard */,
 				AEF23AEF1D14C8E400FF6DFB /* Info.plist */,
 				AEF23AF71D14D5D700FF6DFB /* Feed.swift */,
+				AE5995111D39D6AC003B036A /* RankingItemTableViewCell.swift */,
 			);
 			path = RankingApp;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				AEFACA3D1D1E0BE30085257C /* RankingDetailViewController.swift in Sources */,
 				AEF23AE41D14C8E400FF6DFB /* AppDelegate.swift in Sources */,
 				AEF23AF61D14D02D00FF6DFB /* RankingListViewController.swift in Sources */,
+				AE5995121D39D6AC003B036A /* RankingItemTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

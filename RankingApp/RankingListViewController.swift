@@ -42,6 +42,8 @@ extension RankingListViewController {
         let img = UIImage(data: imgData)
         img?.af_inflate()
         
+        // 独自のセルを使う場合は以下のように記述する
+        // let cell = tableView.dequeueReusableCellWithIdentifier("RankingItemTableViewCell") as! RankingItemTableViewCell
         let cell = UITableViewCell()
         // 文字列中で \(変数名) とすると、変数展開ができる
         cell.textLabel?.text = "\(rank)位 \(item.title)"
